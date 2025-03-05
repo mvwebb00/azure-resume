@@ -24,6 +24,12 @@
 
 body { background: #0f0f0f; }
 
+/* Separator Line */
+.separator {
+   border-bottom: 1px solid #E8E8E8;
+   margin: 24px 0;
+}
+
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
@@ -52,7 +58,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -210,6 +216,9 @@ ul#nav li.current a { color: #F06000; }
    width: 120px;
    height: 120px;
    border-radius: 100%;
+   max-width: 100%;
+   height: auto;
+   border-radius: 50%; /* Optional: to make the image circular */
 }
 #about .contact-details { width: 41.66667%; }
 #about .download {
@@ -757,7 +766,7 @@ call-to-action .button {
     margin: 0 6px;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
 }
 .flex-control-paging li a {
     width: 12px;
