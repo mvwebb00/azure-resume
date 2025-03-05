@@ -1,5 +1,5 @@
 # azure-resume
-Azure Resume created following [ACG project video.](https://www.youtube.com/watch?v=ieYrBWmkfno)
+Azure Resume, inspired by [ACG project video.](https://www.youtube.com/watch?v=ieYrBWmkfno)
 
 ## First Steps
 
