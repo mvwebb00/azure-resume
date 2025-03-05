@@ -1,2 +1,7 @@
 # Ignore local settings file
 local.settings.json
+
+# Ignore other build artifacts
+#
+bin/
+obj/
