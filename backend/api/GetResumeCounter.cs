@@ -11,6 +11,8 @@ using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
 using System.Net.Http;
 using System.Text;
 
+// Alias for the Counter type to avoid conflicts
+using CounterType = Company.Function.Counter;
 
 namespace Company.Function
 {
@@ -19,8 +21,8 @@ namespace Company.Function
         [FunctionName("GetResumeCounter")]
         public static HttpResponseMessage Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
-            [CosmosDB(databaseName: "AzureResume", containerName: "Counter", Connection = "AzureResumeConnectionString", Id = "1", PartitionKey = "1")] Counter counter,
-            [CosmosDB(databaseName: "AzureResume", containerName: "Counter", Connection = "AzureResumeConnectionString", Id = "1", PartitionKey = "1")] out Counter updatedCounter,
+            [CosmosDB(databaseName: "AzureResume", containerName: "Counter", Connection = "AzureResumeConnectionString", Id = "1", PartitionKey = "1")] CounterType counter,
+            [CosmosDB(databaseName: "AzureResume", containerName: "Counter", Connection = "AzureResumeConnectionString", Id = "1", PartitionKey = "1")] out CounterType updatedCounter,
             
             ILogger log)
         {
@@ -34,7 +36,6 @@ namespace Company.Function
             {
                 Content = new StringContent(jsonToReturn, Encoding.UTF8, "application/json")
             };
-
         }
     }
 }
